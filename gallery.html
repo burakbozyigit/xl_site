@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruddy XL — Gallery</title>
+  <meta name="description" content="Ruddy XL gallery — crowd energy, drinks, and interior mood." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap nav">
+      <a href="index.html" class="brand"><span class="brand-mark">RX</span><span>Ruddy XL</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="bookings.html" class="btn btn-primary">Book / Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="pill">Photo-first page</div>
+          <h1>Let the venue sell itself visually.</h1>
+          <p class="lead">A dedicated gallery page makes the whole brand feel more polished. Replace these placeholders with real crowd shots, drink close-ups, stage photos, and room atmosphere.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="bookings.html">Book a night</a>
+            <a class="btn btn-secondary" href="events.html">See events</a>
+          </div>
+        </div>
+        <div class="hero-card"><div class="page-hero-visual gallery"><div class="hero-overlay"><div><strong>Visual storytelling</strong><span>Good nightlife photos do half the marketing job for you.</span></div></div></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><div><h2>Photo categories</h2><p>Use filters to split crowd shots, drinks, and interior photos. Click any item to open the lightbox.</p></div></div>
+        <div class="gallery-controls" aria-label="Gallery filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="crowd">Crowd</button>
+          <button class="filter-btn" data-filter="drinks">Drinks</button>
+          <button class="filter-btn" data-filter="interior">Interior</button>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card large gallery-skin-1" data-category="crowd" data-title="Packed karaoke moment" data-text="A hero crowd shot works best here — hands up, microphone out, room alive."><div class="gallery-glow"></div><div class="gallery-art"></div><div class="gallery-content"><span>Crowd</span><strong>Packed karaoke moment</strong><p>Use your strongest party photo here.</p></div></article>
+          <article class="gallery-card medium gallery-skin-2" data-category="interior" data-title="Blue room atmosphere" data-text="Stage lighting, bar corners, booth seating, or the room before midnight."><div class="gallery-glow"></div><div class="gallery-art"></div><div class="gallery-content"><span>Interior</span><strong>Blue room atmosphere</strong><p>Moody lighting and stage energy.</p></div></article>
+          <article class="gallery-card small gallery-skin-3" data-category="drinks" data-title="Signature cocktail detail" data-text="Close-up drink shots instantly make the site feel more premium."><div class="gallery-glow"></div><div class="gallery-art"></div><div class="gallery-content"><span>Drinks</span><strong>Signature cocktail detail</strong><p>Glassware, garnish, glow.</p></div></article>
+          <article class="gallery-card small gallery-skin-4" data-category="crowd" data-title="Friends at the bar" data-text="Lifestyle shots make the venue feel social rather than staged."><div class="gallery-glow"></div><div class="gallery-art"></div><div class="gallery-content"><span>Crowd</span><strong>Friends at the bar</strong><p>Social, warm, easygoing.</p></div></article>
+          <article class="gallery-card wide gallery-skin-5" data-category="interior" data-title="Golden hour before the rush" data-text="Use a wide frame for room layout, your big screen, stage, or booth seating."><div class="gallery-glow"></div><div class="gallery-art"></div><div class="gallery-content"><span>Interior</span><strong>Golden hour before the rush</strong><p>Wide room shot or stage setup.</p></div></article>
+          <article class="gallery-card small gallery-skin-6" data-category="drinks" data-title="Bottle service or feature pour" data-text="Good for promotions, premium pours, and polished details."><div class="gallery-glow"></div><div class="gallery-art"></div><div class="gallery-content"><span>Drinks</span><strong>Bottle service or feature pour</strong><p>Quick visual luxury touch.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer"><p>Ruddy XL — Gallery</p><p>Replace placeholders with your own venue photography.</p></div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-card">
+      <div class="lightbox-visual gallery-skin-1" id="lightboxVisual">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">×</button>
+      </div>
+      <div class="lightbox-body">
+        <span class="tag" id="lightboxTag">Gallery</span>
+        <h3 id="lightboxTitle">Gallery item</h3>
+        <p class="event-meta" id="lightboxText">Description</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
