@@ -67,15 +67,22 @@ ul {
 }
 
 /* --- Language toggle visibility --- */
-/* Only hide translatable content, never the language buttons themselves. */
-[data-lang]:not(.lang-btn) { display: block; }
-body.lang-en [data-lang="en"]:not(.lang-btn) { display: block; }
-body.lang-et [data-lang="et"]:not(.lang-btn) { display: block; }
 
-/* Inline elements (spans, etc.) need inline display */
-span[data-lang]:not(.lang-btn) { display: none; }
-body.lang-en span[data-lang="en"]:not(.lang-btn) { display: inline; }
-body.lang-et span[data-lang="et"]:not(.lang-btn) { display: inline; }
+/* Hide only translatable content, not language buttons */
+[data-lang]:not(.lang-btn) {
+  display: none;
+}
+
+/* Show selected language */
+body.lang-en [data-lang="en"]:not(.lang-btn),
+body.lang-et [data-lang="et"]:not(.lang-btn) {
+  display: revert;
+}
+
+/* Keep language buttons always visible */
+.lang-btn {
+  display: inline-flex !important;
+}
 
 /* ============================================
    NAVIGATION
