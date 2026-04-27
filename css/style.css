@@ -68,7 +68,7 @@ ul {
 
 /* --- Language toggle visibility --- */
 /* Only hide translatable content, never the language buttons themselves. */
-[data-lang]:not(.lang-btn) { display: none; }
+[data-lang]:not(.lang-btn) { display: block; }
 body.lang-en [data-lang="en"]:not(.lang-btn) { display: block; }
 body.lang-et [data-lang="et"]:not(.lang-btn) { display: block; }
 
