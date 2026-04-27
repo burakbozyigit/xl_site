@@ -214,30 +214,15 @@
 
       <!-- Category Filters -->
       <nav class="menu-categories" aria-label="Menu categories">
-        <button class="cat-btn active" data-cat="all" onclick="filterMenu('all')">
-          <span data-lang="en">All</span>
-          <span data-lang="et">Kõik</span>
-        </button>
-        <button class="cat-btn" data-cat="cocktails" onclick="filterMenu('cocktails')">
-          <span data-lang="en">Cocktails</span>
-          <span data-lang="et">Kokteilid</span>
-        </button>
-        <button class="cat-btn" data-cat="beer" onclick="filterMenu('beer')">
-          <span data-lang="en">Beer &amp; Cider</span>
-          <span data-lang="et">Õlu &amp; Siider</span>
-        </button>
-        <button class="cat-btn" data-cat="shots" onclick="filterMenu('shots')">
-          <span data-lang="en">Shots</span>
-          <span data-lang="et">Shotid</span>
-        </button>
-        <button class="cat-btn" data-cat="soft" onclick="filterMenu('soft')">
-          <span data-lang="en">Soft Drinks</span>
-          <span data-lang="et">Karastusjoogid</span>
-        </button>
-        <button class="cat-btn" data-cat="food" onclick="filterMenu('food')">
-          <span data-lang="en">Food</span>
-          <span data-lang="et">Toit</span>
-        </button>
+        <button class="cat-btn active" data-cat="all" onclick="filterMenu('all')"><span data-lang="en">All</span><span data-lang="et">Kõik</span></button>
+        <button class="cat-btn" data-cat="cocktails" onclick="filterMenu('cocktails')"><span data-lang="en">Cocktails</span><span data-lang="et">Kokteilid</span></button>
+        <button class="cat-btn" data-cat="basic-cocktails" onclick="filterMenu('basic-cocktails')"><span data-lang="en">Basic Cocktails</span><span data-lang="et">Basic kokteilid</span></button>
+        <button class="cat-btn" data-cat="shots" onclick="filterMenu('shots')"><span data-lang="en">Shots</span><span data-lang="et">Shotid</span></button>
+        <button class="cat-btn" data-cat="draft-beer" onclick="filterMenu('draft-beer')"><span data-lang="en">Draft Beer</span><span data-lang="et">Vaadiõlu</span></button>
+        <button class="cat-btn" data-cat="can-beer-cider" onclick="filterMenu('can-beer-cider')"><span data-lang="en">Can Beer &amp; Cider</span><span data-lang="et">Purgiõlu &amp; Siider</span></button>
+        <button class="cat-btn" data-cat="non-alcoholic-beer" onclick="filterMenu('non-alcoholic-beer')"><span data-lang="en">Non-Alcoholic Beer</span><span data-lang="et">Alkoholivaba õlu</span></button>
+        <button class="cat-btn" data-cat="wines" onclick="filterMenu('wines')"><span data-lang="en">Wines</span><span data-lang="et">Veinid</span></button>
+        <button class="cat-btn" data-cat="cava-prosecco" onclick="filterMenu('cava-prosecco')"><span data-lang="en">Cava &amp; Prosecco</span><span data-lang="et">Cava &amp; Prosecco</span></button>
       </nav>
 
       <!-- Menu Items -->
@@ -246,168 +231,515 @@
         <!-- Cocktails -->
         <li class="menu-item" data-cat="cocktails">
           <div class="menu-item-info">
-            <h3>Karaoke Sunset</h3>
-            <p><span data-lang="en">Vodka, passionfruit, mango, lime</span><span data-lang="et">Viin, marakujasirup, mango, laim</span></p>
+            <h3>Moscow Mule</h3>
+            <p><span data-lang="en">Vodka, ginger beer, lime</span><span data-lang="et">Viin, ingveriõlu, laim</span></p>
           </div>
-          <span class="menu-item-price">9€</span>
+          <span class="menu-item-price">12€</span>
         </li>
         <li class="menu-item" data-cat="cocktails">
           <div class="menu-item-info">
-            <h3>Neon Nights</h3>
-            <p><span data-lang="en">Gin, blue curaçao, tonic, mint</span><span data-lang="et">Džinn, sinine kurassao, tonik, piparmünt</span></p>
+            <h3>Cosmopolitan</h3>
+            <p><span data-lang="en">Vodka, triple sec, cranberry, lime</span><span data-lang="et">Viin, triple sec, jõhvikamahl, laim</span></p>
           </div>
-          <span class="menu-item-price">9€</span>
+          <span class="menu-item-price">10.5€</span>
         </li>
         <li class="menu-item" data-cat="cocktails">
           <div class="menu-item-info">
-            <h3>Mic Drop</h3>
-            <p><span data-lang="en">Rum, raspberry, ginger beer, lime</span><span data-lang="et">Rumm, vaarikas, ingveriõlu, laim</span></p>
+            <h3>Espresso Martini</h3>
+            <p><span data-lang="en">Vodka, coffee liqueur, espresso</span><span data-lang="et">Viin, kohviliköör, espresso</span></p>
+          </div>
+          <span class="menu-item-price">12€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Skinny Bitch</h3>
+            <p><span data-lang="en">Vodka, soda water, lime</span><span data-lang="et">Viin, mullivesi, laim</span></p>
           </div>
           <span class="menu-item-price">10€</span>
         </li>
         <li class="menu-item" data-cat="cocktails">
           <div class="menu-item-info">
-            <h3>Classic Mojito</h3>
-            <p><span data-lang="en">White rum, mint, lime, soda</span><span data-lang="et">Valge rumm, piparmünt, laim, sooda</span></p>
+            <h3>Sex on the Beach</h3>
+            <p><span data-lang="en">Vodka, peach liqueur, orange, cranberry</span><span data-lang="et">Viin, virsikuliköör, apelsinimahl, jõhvikamahl</span></p>
           </div>
-          <span class="menu-item-price">9€</span>
+          <span class="menu-item-price">10.5€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>White Russian</h3>
+            <p><span data-lang="en">Vodka, coffee liqueur, cream</span><span data-lang="et">Viin, kohviliköör, koor</span></p>
+          </div>
+          <span class="menu-item-price">12€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Pornstar Martini</h3>
+            <p><span data-lang="en">Vodka, passion fruit, vanilla, lime, prosecco shot</span><span data-lang="et">Viin, passionivili, vanill, laim, prosecco shot</span></p>
+          </div>
+          <span class="menu-item-price">14€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Gin Sour</h3>
+            <p><span data-lang="en">Gin, lemon juice, sugar syrup, egg white</span><span data-lang="et">Džinn, sidrunimahl, suhkrusiirup, munavalge</span></p>
+          </div>
+          <span class="menu-item-price">13€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Negroni</h3>
+            <p><span data-lang="en">Gin, Campari, sweet vermouth</span><span data-lang="et">Džinn, Campari, magus vermut</span></p>
+          </div>
+          <span class="menu-item-price">13€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Tom Collins</h3>
+            <p><span data-lang="en">Gin, lemon juice, sugar syrup, soda water</span><span data-lang="et">Džinn, sidrunimahl, suhkrusiirup, mullivesi</span></p>
+          </div>
+          <span class="menu-item-price">10.5€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Mojito</h3>
+            <p><span data-lang="en">White rum, lime, mint, sugar, soda water</span><span data-lang="et">Valge rumm, laim, münt, suhkur, mullivesi</span></p>
+          </div>
+          <span class="menu-item-price">13€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Margarita</h3>
+            <p><span data-lang="en">Tequila, triple sec, lime</span><span data-lang="et">Tequila, triple sec, laim</span></p>
+          </div>
+          <span class="menu-item-price">11€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Old Fashioned</h3>
+            <p><span data-lang="en">Bourbon whiskey, bitters, sugar</span><span data-lang="et">Bourbon viski, bitter, suhkur</span></p>
+          </div>
+          <span class="menu-item-price">12€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Whisky Sour</h3>
+            <p><span data-lang="en">Whisky, lemon juice, sugar syrup, egg white</span><span data-lang="et">Viski, sidrunimahl, suhkrusiirup, munavalge</span></p>
+          </div>
+          <span class="menu-item-price">13€</span>
         </li>
         <li class="menu-item" data-cat="cocktails">
           <div class="menu-item-info">
             <h3>Aperol Spritz</h3>
-            <p><span data-lang="en">Aperol, Prosecco, soda, orange</span><span data-lang="et">Aperol, Prosecco, sooda, apelsin</span></p>
+            <p><span data-lang="en">Aperol, prosecco, soda water</span><span data-lang="et">Aperol, prosecco, mullivesi</span></p>
           </div>
-          <span class="menu-item-price">9€</span>
+          <span class="menu-item-price">9.5€</span>
         </li>
         <li class="menu-item" data-cat="cocktails">
           <div class="menu-item-info">
-            <h3>Stage Fright</h3>
-            <p><span data-lang="en">Whisky, honey, lemon, ginger</span><span data-lang="et">Viski, mesi, sidrun, ingver</span></p>
+            <h3>Limoncello Spritz</h3>
+            <p><span data-lang="en">Limoncello, prosecco, soda water</span><span data-lang="et">Limoncello, prosecco, mullivesi</span></p>
           </div>
-          <span class="menu-item-price">10€</span>
+          <span class="menu-item-price">9.5€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Campari Spritz</h3>
+            <p><span data-lang="en">Campari, prosecco, soda water</span><span data-lang="et">Campari, prosecco, mullivesi</span></p>
+          </div>
+          <span class="menu-item-price">9.5€</span>
         </li>
 
-        <!-- Beer -->
-        <li class="menu-item" data-cat="beer">
+        <!-- Basic Cocktails -->
+        <li class="menu-item" data-cat="basic-cocktails">
           <div class="menu-item-info">
-            <h3>Saku Original</h3>
-            <p><span data-lang="en">Estonian lager, 4.6% — 0.5L</span><span data-lang="et">Eesti laager, 4.6% — 0.5L</span></p>
+            <h3>Danska Vodka Red Bull</h3>
+            <p></p>
           </div>
-          <span class="menu-item-price">5€</span>
+          <span class="menu-item-price">9€</span>
         </li>
-        <li class="menu-item" data-cat="beer">
+        <li class="menu-item" data-cat="basic-cocktails">
           <div class="menu-item-info">
-            <h3>A. Le Coq Porter</h3>
-            <p><span data-lang="en">Dark ale, 6.5% — 0.33L</span><span data-lang="et">Tume õlu, 6.5% — 0.33L</span></p>
+            <h3>Jagerbull</h3>
+            <p></p>
           </div>
-          <span class="menu-item-price">6€</span>
+          <span class="menu-item-price">9€</span>
         </li>
-        <li class="menu-item" data-cat="beer">
+        <li class="menu-item" data-cat="basic-cocktails">
           <div class="menu-item-info">
-            <h3>Craft IPA</h3>
-            <p><span data-lang="en">Rotating local craft, 5–7% — 0.33L</span><span data-lang="et">Vahtuv kohalik käsitöö, 5–7% — 0.33L</span></p>
+            <h3>Jagermeister + Cola</h3>
+            <p></p>
           </div>
-          <span class="menu-item-price">7€</span>
+          <span class="menu-item-price">9€</span>
         </li>
-        <li class="menu-item" data-cat="beer">
+        <li class="menu-item" data-cat="basic-cocktails">
           <div class="menu-item-info">
-            <h3>Rekorderlig Cider</h3>
-            <p><span data-lang="en">Strawberry-lime, 4% — 0.5L</span><span data-lang="et">Maasikas-laim, 4% — 0.5L</span></p>
+            <h3>Bombay Gin Tonic</h3>
+            <p></p>
           </div>
-          <span class="menu-item-price">7€</span>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="basic-cocktails">
+          <div class="menu-item-info">
+            <h3>Gin + Watermelon Red Bull</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="basic-cocktails">
+          <div class="menu-item-info">
+            <h3>Rum + Cola</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="basic-cocktails">
+          <div class="menu-item-info">
+            <h3>Jameson + Cola</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="basic-cocktails">
+          <div class="menu-item-info">
+            <h3>Jack Daniels + Cola</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">10€</span>
         </li>
 
         <!-- Shots -->
         <li class="menu-item" data-cat="shots">
           <div class="menu-item-info">
+            <h3>Hot Shot</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Barbie Shot</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Kamikaze</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>B52</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Fireball</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Jager</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
             <h3>Tequila</h3>
-            <p><span data-lang="en">With lime &amp; salt</span><span data-lang="et">Soolaga &amp; laimiga</span></p>
+            <p></p>
           </div>
-          <span class="menu-item-price">4€</span>
+          <span class="menu-item-price">5€</span>
         </li>
         <li class="menu-item" data-cat="shots">
           <div class="menu-item-info">
-            <h3>Jägermeister</h3>
-            <p><span data-lang="en">Ice cold, classic</span><span data-lang="et">Jääkülm, klassika</span></p>
+            <h3>Vodka</h3>
+            <p></p>
           </div>
-          <span class="menu-item-price">4€</span>
+          <span class="menu-item-price">5€</span>
         </li>
         <li class="menu-item" data-cat="shots">
           <div class="menu-item-info">
-            <h3>Shot Trio</h3>
-            <p><span data-lang="en">Three shots of your choice</span><span data-lang="et">Kolm shotti oma valikul</span></p>
+            <h3>Minttu</h3>
+            <p></p>
           </div>
-          <span class="menu-item-price">10€</span>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Salmari</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Blowjob</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Limoncello</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Jägerbomb</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">7€</span>
         </li>
 
-        <!-- Soft -->
-        <li class="menu-item" data-cat="soft">
+        <!-- Draft Beer -->
+        <li class="menu-item" data-cat="draft-beer">
           <div class="menu-item-info">
-            <h3>Coca-Cola / Zero</h3>
-            <p><span data-lang="en">0.33L can</span><span data-lang="et">0.33L purk</span></p>
-          </div>
-          <span class="menu-item-price">3€</span>
-        </li>
-        <li class="menu-item" data-cat="soft">
-          <div class="menu-item-info">
-            <h3>
-              <span data-lang="en">Sparkling Water</span>
-              <span data-lang="et">Vahuvesi</span>
-            </h3>
+            <h3>Heineken</h3>
             <p>0.5L</p>
           </div>
-          <span class="menu-item-price">2€</span>
+          <span class="menu-item-price">6€</span>
         </li>
-        <li class="menu-item" data-cat="soft">
+        <li class="menu-item" data-cat="draft-beer">
           <div class="menu-item-info">
-            <h3>Red Bull</h3>
-            <p>0.25L</p>
+            <h3>Tanker Tume Lager</h3>
+            <p>0.5L</p>
           </div>
-          <span class="menu-item-price">4€</span>
+          <span class="menu-item-price">6.5€</span>
+        </li>
+        <li class="menu-item" data-cat="draft-beer">
+          <div class="menu-item-info">
+            <h3>Tanker Select Lager</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+        <li class="menu-item" data-cat="draft-beer">
+          <div class="menu-item-info">
+            <h3>Tanker Reloaded IPA</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6.5€</span>
+        </li>
+        <li class="menu-item" data-cat="draft-beer">
+          <div class="menu-item-info">
+            <h3>Tanker Cider</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+        <li class="menu-item" data-cat="draft-beer">
+          <div class="menu-item-info">
+            <h3>Anarkist England IPA</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6.5€</span>
         </li>
 
-        <!-- Food -->
-        <li class="menu-item" data-cat="food">
+        <!-- Can Beer & Cider -->
+        <li class="menu-item" data-cat="can-beer-cider">
           <div class="menu-item-info">
-            <h3>
-              <span data-lang="en">Loaded Nachos</span>
-              <span data-lang="et">Koormatud natšod</span>
-            </h3>
-            <p><span data-lang="en">Cheese, jalapeños, sour cream, guac</span><span data-lang="et">Juust, jalapeñod, hapukoor, guacamole</span></p>
+            <h3>Sol</h3>
+            <p>0.33L</p>
           </div>
-          <span class="menu-item-price">12€</span>
+          <span class="menu-item-price">6€</span>
         </li>
-        <li class="menu-item" data-cat="food">
+        <li class="menu-item" data-cat="can-beer-cider">
           <div class="menu-item-info">
-            <h3>
-              <span data-lang="en">Crispy Wings</span>
-              <span data-lang="et">Krõbedad tiivad</span>
-            </h3>
-            <p><span data-lang="en">6 pcs, BBQ or buffalo sauce</span><span data-lang="et">6 tk, BBQ või buffalo kaste</span></p>
+            <h3>Heineken</h3>
+            <p>0.33L</p>
           </div>
-          <span class="menu-item-price">11€</span>
+          <span class="menu-item-price">6€</span>
         </li>
-        <li class="menu-item" data-cat="food">
+        <li class="menu-item" data-cat="can-beer-cider">
           <div class="menu-item-info">
-            <h3>
-              <span data-lang="en">Cheese Board</span>
-              <span data-lang="et">Juustuplaat</span>
-            </h3>
-            <p><span data-lang="en">3 cheeses, crackers, honey, fruit</span><span data-lang="et">3 juustu, kreekerid, mesi, puuviljad</span></p>
+            <h3>Bira Moretti</h3>
+            <p>0.33L</p>
           </div>
-          <span class="menu-item-price">14€</span>
+          <span class="menu-item-price">6€</span>
         </li>
-        <li class="menu-item" data-cat="food">
+        <li class="menu-item" data-cat="can-beer-cider">
           <div class="menu-item-info">
-            <h3>
-              <span data-lang="en">Fries</span>
-              <span data-lang="et">Friikartulid</span>
-            </h3>
-            <p><span data-lang="en">Seasoned, with dipping sauce</span><span data-lang="et">Maitsestatud, dipikastmega</span></p>
+            <h3>Tanker Kerge IPA</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6.5€</span>
+        </li>
+        <li class="menu-item" data-cat="can-beer-cider">
+          <div class="menu-item-info">
+            <h3>Tanker Tume Lager</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+        <li class="menu-item" data-cat="can-beer-cider">
+          <div class="menu-item-info">
+            <h3>Tanker Select Lager</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+        <li class="menu-item" data-cat="can-beer-cider">
+          <div class="menu-item-info">
+            <h3>Tanker Sauna Lager</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+        <li class="menu-item" data-cat="can-beer-cider">
+          <div class="menu-item-info">
+            <h3>Tanker Sauna Ale</h3>
+            <p>0.44L</p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+        <li class="menu-item" data-cat="can-beer-cider">
+          <div class="menu-item-info">
+            <h3>Ginger Beer</h3>
+            <p>0.33L</p>
+          </div>
+          <span class="menu-item-price">6.5€</span>
+        </li>
+        <li class="menu-item" data-cat="can-beer-cider">
+          <div class="menu-item-info">
+            <h3>Hartwall Long Drink</h3>
+            <p>0.33L</p>
           </div>
           <span class="menu-item-price">6€</span>
         </li>
 
+        <!-- Non-Alcoholic Beer -->
+        <li class="menu-item" data-cat="non-alcoholic-beer">
+          <div class="menu-item-info">
+            <h3>Heineken</h3>
+            <p>0.33L</p>
+          </div>
+          <span class="menu-item-price"></span>
+        </li>
+        <li class="menu-item" data-cat="non-alcoholic-beer">
+          <div class="menu-item-info">
+            <h3>Bira Moretti</h3>
+            <p>0.33L</p>
+          </div>
+          <span class="menu-item-price"></span>
+        </li>
+        <li class="menu-item" data-cat="non-alcoholic-beer">
+          <div class="menu-item-info">
+            <h3>Tanker Select Lager</h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price"></span>
+        </li>
+        <li class="menu-item" data-cat="non-alcoholic-beer">
+          <div class="menu-item-info">
+            <h3>Tanker Sauna Session</h3>
+            <p>0.44L</p>
+          </div>
+          <span class="menu-item-price"></span>
+        </li>
+        <li class="menu-item" data-cat="non-alcoholic-beer">
+          <div class="menu-item-info">
+            <h3>Ginger Joe Beer</h3>
+            <p>0.33L</p>
+          </div>
+          <span class="menu-item-price"></span>
+        </li>
+
+        <!-- Wines -->
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>Sohne Relax Riesling</h3>
+            <p>White</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>Chenin 21 White</h3>
+            <p>White</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>Pinot Grigio 22</h3>
+            <p>White</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>E. Serafino Gavi</h3>
+            <p>White</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>Cabernet Sauv</h3>
+            <p>Red</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>Bottega Valpolicella</h3>
+            <p>Red</p>
+          </div>
+          <span class="menu-item-price">7/35€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>Semi Sweet Cabernet</h3>
+            <p>Red</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>Vaziani Saperavi</h3>
+            <p>Red</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="wines">
+          <div class="menu-item-info">
+            <h3>No1 Bordeaux</h3>
+            <p>Red</p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+
+        <!-- Cava & Prosecco -->
+        <li class="menu-item" data-cat="cava-prosecco">
+          <div class="menu-item-info">
+            <h3>Serena Prosecco</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">6/30€</span>
+        </li>
+        <li class="menu-item" data-cat="cava-prosecco">
+          <div class="menu-item-info">
+            <h3>Vallformosa Cava</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">7/35€</span>
+        </li>
+        <li class="menu-item" data-cat="cava-prosecco">
+          <div class="menu-item-info">
+            <h3>Simonnet-Febvre Rose</h3>
+            <p></p>
+          </div>
+          <span class="menu-item-price">7/35€</span>
+        </li>
       </ul>
     </div>
   </article>
