@@ -84,28 +84,41 @@ function filterMenu(category) {
 }
 
 /* ============================================
-   CONTACT FORM SUBMISSION
+   CONTACT FORM SUBMISSION — Formspree
    ============================================ */
-function handleContactForm(event) {
+async function handleContactForm(event) {
   event.preventDefault();
   const form = event.target;
   const btn = form.querySelector('.btn-primary');
 
-  /* Simple feedback */
   btn.textContent = currentLang === 'en' ? 'Sending...' : 'Saatmine...';
   btn.disabled = true;
 
-  setTimeout(() => {
-    btn.textContent = currentLang === 'en' ? '✓ Sent!' : '✓ Saadetud!';
-    btn.style.background = '#2ecc71';
-    form.reset();
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
 
-    setTimeout(() => {
-      btn.textContent = currentLang === 'en' ? 'Send Message' : 'Saada sõnum';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
-  }, 1200);
+    if (response.ok) {
+      btn.textContent = currentLang === 'en' ? '✓ Sent!' : '✓ Saadetud!';
+      btn.style.background = '#2ecc71';
+      form.reset();
+
+      setTimeout(() => {
+        btn.textContent = currentLang === 'en' ? 'Send Message' : 'Saada sõnum';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (error) {
+    btn.textContent = currentLang === 'en' ? 'Error — try again' : 'Viga — proovi uuesti';
+    btn.style.background = '#e63f6f';
+    btn.disabled = false;
+  }
 }
 
 /* ============================================
