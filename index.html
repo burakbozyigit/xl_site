@@ -3,105 +3,740 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruddy XL — Karaoke, Cocktails & Late Nights</title>
-  <meta name="description" content="Ruddy XL — warm nights, bold cocktails, karaoke energy and unforgettable events." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="KaraokeBar — Tallinn's favourite karaoke venue. Live nights, private events and great drinks at Viru 13/15." />
+  <title>KaraokeBar | Tallinn</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-  <div class="topbar">
-    <div class="wrap nav">
-      <a href="index.html" class="brand" aria-label="Ruddy XL Home"><span class="brand-mark">RX</span><span>Ruddy XL</span></a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="events.html">Events</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="bookings.html">Bookings</a>
-        <a href="bookings.html" class="btn btn-primary">Book / Contact</a>
+<body class="lang-en">
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a class="nav-logo" href="#" onclick="showPage('home'); return false;">
+        KARAOKE<span>BAR</span>
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li>
+          <a href="#home" data-page="home" onclick="showPage('home'); return false;" class="active">
+            <span data-lang="en">Home</span>
+            <span data-lang="et">Avaleht</span>
+          </a>
+        </li>
+        <li>
+          <a href="#menu" data-page="menu" onclick="showPage('menu'); return false;">
+            <span data-lang="en">Menu</span>
+            <span data-lang="et">Menüü</span>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery" data-page="gallery" onclick="showPage('gallery'); return false;">
+            <span data-lang="en">Gallery</span>
+            <span data-lang="et">Galerii</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" data-page="contact" onclick="showPage('contact'); return false;">
+            <span data-lang="en">Contact</span>
+            <span data-lang="et">Kontakt</span>
+          </a>
+        </li>
+
+        <!-- Language Switcher (inside mobile menu too) -->
+        <li>
+          <div class="lang-switcher" role="group" aria-label="Language selector">
+            <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" data-lang="et" onclick="setLanguage('et')">ET</button>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Language Switcher (desktop, outside ul) -->
+      <div class="lang-switcher" role="group" aria-label="Language selector" style="display:flex;" id="desktop-lang">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="et" onclick="setLanguage('et')">ET</button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HOME PAGE
+       ============================================================ -->
+  <main>
+
+  <article id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <span class="mic-icon" aria-hidden="true">🎤</span>
+        <p class="hero-eyebrow">
+          <span data-lang="en">Tallinn's Favourite Karaoke Venue</span>
+          <span data-lang="et">Tallinna lemmik karaoke koht</span>
+        </p>
+        <h1 class="hero-title">
+          <span data-lang="en">SING<span class="accent">LOUD</span></span>
+          <span data-lang="et">LAULA<span class="accent">VALJULT</span></span>
+        </h1>
+        <p class="hero-subtitle">
+          <span data-lang="en">Great music. Great drinks. Zero judgment.</span>
+          <span data-lang="et">Hea muusika. Head joogid. Nullhinnangud.</span>
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="showPage('contact')">
+            <span data-lang="en">Book a Table</span>
+            <span data-lang="et">Broneeri laud</span>
+          </button>
+          <button class="btn btn-outline" onclick="showPage('menu')">
+            <span data-lang="en">View Menu</span>
+            <span data-lang="et">Vaata menüüd</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" aria-labelledby="features-title">
+      <div class="section-header">
+        <p class="section-label">
+          <span data-lang="en">Why us?</span>
+          <span data-lang="et">Miks meie?</span>
+        </p>
+        <h2 class="section-title" id="features-title">
+          <span data-lang="en">The Full Experience</span>
+          <span data-lang="et">Täielik elamus</span>
+        </h2>
+      </div>
+
+      <ul class="features-grid" role="list">
+        <li class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🎶</div>
+          <h3 class="feature-title">
+            <span data-lang="en">10,000+ Songs</span>
+            <span data-lang="et">10 000+ laulu</span>
+          </h3>
+          <p class="feature-text">
+            <span data-lang="en">From classic rock to the latest pop hits — every decade, every genre covered.</span>
+            <span data-lang="et">Klassikalisest rokist uusimate pophittideni — iga aastakümme, iga žanr kaetud.</span>
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🍹</div>
+          <h3 class="feature-title">
+            <span data-lang="en">Full Bar</span>
+            <span data-lang="et">Täispood</span>
+          </h3>
+          <p class="feature-text">
+            <span data-lang="en">Handcrafted cocktails, local beers, and a great wine list to keep the night going.</span>
+            <span data-lang="et">Käsitsi valmistatud kokteilid, kohalikud õlled ja suurepärane veinivalik.</span>
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🏛️</div>
+          <h3 class="feature-title">
+            <span data-lang="en">Private Rooms</span>
+            <span data-lang="et">Privaatruumid</span>
+          </h3>
+          <p class="feature-text">
+            <span data-lang="en">Celebrate birthdays, hen parties, or team events in our bookable private karaoke rooms.</span>
+            <span data-lang="et">Tähistage sünnipäevi, põnnide pidustusi või meeskonnasündmusi meie privaatsetes karaokeruumides.</span>
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📍</div>
+          <h3 class="feature-title">
+            <span data-lang="en">Old Town Location</span>
+            <span data-lang="et">Vanalinna asukoht</span>
+          </h3>
+          <p class="feature-text">
+            <span data-lang="en">Right in the heart of Tallinn at Viru street — steps from everything the city has to offer.</span>
+            <span data-lang="et">Tallinna südames Viru tänaval — mõne sammu kaugusel kõigest, mida linn pakub.</span>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Private Events Banner -->
+    <section class="section" aria-labelledby="events-title">
+      <div class="events-banner">
+        <div class="events-banner-text">
+          <h2 id="events-title">
+            <span data-lang="en">Private Events & Venue Hire</span>
+            <span data-lang="et">Privaatsündmused &amp; ruumide rent</span>
+          </h2>
+          <p>
+            <span data-lang="en">Planning something special? Rent the whole venue or a private room. We handle the setup — you bring the crowd.</span>
+            <span data-lang="et">Planeerite midagi erilist? Rentige kogu baar või privaatne ruum. Meie korraldame — teie tooge rahvas.</span>
+          </p>
+        </div>
+        <button class="btn btn-primary" onclick="showPage('contact')">
+          <span data-lang="en">Enquire Now</span>
+          <span data-lang="et">Küsi pakkumist</span>
+        </button>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- ============================================================
+       MENU PAGE
+       ============================================================ -->
+  <article id="page-menu" class="page">
+    <div class="section">
+      <header class="section-header">
+        <p class="section-label">
+          <span data-lang="en">Drinks &amp; Food</span>
+          <span data-lang="et">Joogid &amp; Toit</span>
+        </p>
+        <h2 class="section-title">
+          <span data-lang="en">Our Menu</span>
+          <span data-lang="et">Meie Menüü</span>
+        </h2>
+        <p class="section-desc">
+          <span data-lang="en">All prices include VAT. Menu subject to seasonal changes.</span>
+          <span data-lang="et">Kõik hinnad sisaldavad käibemaksu. Menüü võib hooajaliselt muutuda.</span>
+        </p>
+      </header>
+
+      <!-- Category Filters -->
+      <nav class="menu-categories" aria-label="Menu categories">
+        <button class="cat-btn active" data-cat="all" onclick="filterMenu('all')">
+          <span data-lang="en">All</span>
+          <span data-lang="et">Kõik</span>
+        </button>
+        <button class="cat-btn" data-cat="cocktails" onclick="filterMenu('cocktails')">
+          <span data-lang="en">Cocktails</span>
+          <span data-lang="et">Kokteilid</span>
+        </button>
+        <button class="cat-btn" data-cat="beer" onclick="filterMenu('beer')">
+          <span data-lang="en">Beer &amp; Cider</span>
+          <span data-lang="et">Õlu &amp; Siider</span>
+        </button>
+        <button class="cat-btn" data-cat="shots" onclick="filterMenu('shots')">
+          <span data-lang="en">Shots</span>
+          <span data-lang="et">Shotid</span>
+        </button>
+        <button class="cat-btn" data-cat="soft" onclick="filterMenu('soft')">
+          <span data-lang="en">Soft Drinks</span>
+          <span data-lang="et">Karastusjoogid</span>
+        </button>
+        <button class="cat-btn" data-cat="food" onclick="filterMenu('food')">
+          <span data-lang="en">Food</span>
+          <span data-lang="et">Toit</span>
+        </button>
+      </nav>
+
+      <!-- Menu Items -->
+      <ul class="menu-grid" role="list">
+
+        <!-- Cocktails -->
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Karaoke Sunset</h3>
+            <p><span data-lang="en">Vodka, passionfruit, mango, lime</span><span data-lang="et">Viin, marakujasirup, mango, laim</span></p>
+          </div>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Neon Nights</h3>
+            <p><span data-lang="en">Gin, blue curaçao, tonic, mint</span><span data-lang="et">Džinn, sinine kurassao, tonik, piparmünt</span></p>
+          </div>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Mic Drop</h3>
+            <p><span data-lang="en">Rum, raspberry, ginger beer, lime</span><span data-lang="et">Rumm, vaarikas, ingveriõlu, laim</span></p>
+          </div>
+          <span class="menu-item-price">10€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Classic Mojito</h3>
+            <p><span data-lang="en">White rum, mint, lime, soda</span><span data-lang="et">Valge rumm, piparmünt, laim, sooda</span></p>
+          </div>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Aperol Spritz</h3>
+            <p><span data-lang="en">Aperol, Prosecco, soda, orange</span><span data-lang="et">Aperol, Prosecco, sooda, apelsin</span></p>
+          </div>
+          <span class="menu-item-price">9€</span>
+        </li>
+        <li class="menu-item" data-cat="cocktails">
+          <div class="menu-item-info">
+            <h3>Stage Fright</h3>
+            <p><span data-lang="en">Whisky, honey, lemon, ginger</span><span data-lang="et">Viski, mesi, sidrun, ingver</span></p>
+          </div>
+          <span class="menu-item-price">10€</span>
+        </li>
+
+        <!-- Beer -->
+        <li class="menu-item" data-cat="beer">
+          <div class="menu-item-info">
+            <h3>Saku Original</h3>
+            <p><span data-lang="en">Estonian lager, 4.6% — 0.5L</span><span data-lang="et">Eesti laager, 4.6% — 0.5L</span></p>
+          </div>
+          <span class="menu-item-price">5€</span>
+        </li>
+        <li class="menu-item" data-cat="beer">
+          <div class="menu-item-info">
+            <h3>A. Le Coq Porter</h3>
+            <p><span data-lang="en">Dark ale, 6.5% — 0.33L</span><span data-lang="et">Tume õlu, 6.5% — 0.33L</span></p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+        <li class="menu-item" data-cat="beer">
+          <div class="menu-item-info">
+            <h3>Craft IPA</h3>
+            <p><span data-lang="en">Rotating local craft, 5–7% — 0.33L</span><span data-lang="et">Vahtuv kohalik käsitöö, 5–7% — 0.33L</span></p>
+          </div>
+          <span class="menu-item-price">7€</span>
+        </li>
+        <li class="menu-item" data-cat="beer">
+          <div class="menu-item-info">
+            <h3>Rekorderlig Cider</h3>
+            <p><span data-lang="en">Strawberry-lime, 4% — 0.5L</span><span data-lang="et">Maasikas-laim, 4% — 0.5L</span></p>
+          </div>
+          <span class="menu-item-price">7€</span>
+        </li>
+
+        <!-- Shots -->
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Tequila</h3>
+            <p><span data-lang="en">With lime &amp; salt</span><span data-lang="et">Soolaga &amp; laimiga</span></p>
+          </div>
+          <span class="menu-item-price">4€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Jägermeister</h3>
+            <p><span data-lang="en">Ice cold, classic</span><span data-lang="et">Jääkülm, klassika</span></p>
+          </div>
+          <span class="menu-item-price">4€</span>
+        </li>
+        <li class="menu-item" data-cat="shots">
+          <div class="menu-item-info">
+            <h3>Shot Trio</h3>
+            <p><span data-lang="en">Three shots of your choice</span><span data-lang="et">Kolm shotti oma valikul</span></p>
+          </div>
+          <span class="menu-item-price">10€</span>
+        </li>
+
+        <!-- Soft -->
+        <li class="menu-item" data-cat="soft">
+          <div class="menu-item-info">
+            <h3>Coca-Cola / Zero</h3>
+            <p><span data-lang="en">0.33L can</span><span data-lang="et">0.33L purk</span></p>
+          </div>
+          <span class="menu-item-price">3€</span>
+        </li>
+        <li class="menu-item" data-cat="soft">
+          <div class="menu-item-info">
+            <h3>
+              <span data-lang="en">Sparkling Water</span>
+              <span data-lang="et">Vahuvesi</span>
+            </h3>
+            <p>0.5L</p>
+          </div>
+          <span class="menu-item-price">2€</span>
+        </li>
+        <li class="menu-item" data-cat="soft">
+          <div class="menu-item-info">
+            <h3>Red Bull</h3>
+            <p>0.25L</p>
+          </div>
+          <span class="menu-item-price">4€</span>
+        </li>
+
+        <!-- Food -->
+        <li class="menu-item" data-cat="food">
+          <div class="menu-item-info">
+            <h3>
+              <span data-lang="en">Loaded Nachos</span>
+              <span data-lang="et">Koormatud natšod</span>
+            </h3>
+            <p><span data-lang="en">Cheese, jalapeños, sour cream, guac</span><span data-lang="et">Juust, jalapeñod, hapukoor, guacamole</span></p>
+          </div>
+          <span class="menu-item-price">12€</span>
+        </li>
+        <li class="menu-item" data-cat="food">
+          <div class="menu-item-info">
+            <h3>
+              <span data-lang="en">Crispy Wings</span>
+              <span data-lang="et">Krõbedad tiivad</span>
+            </h3>
+            <p><span data-lang="en">6 pcs, BBQ or buffalo sauce</span><span data-lang="et">6 tk, BBQ või buffalo kaste</span></p>
+          </div>
+          <span class="menu-item-price">11€</span>
+        </li>
+        <li class="menu-item" data-cat="food">
+          <div class="menu-item-info">
+            <h3>
+              <span data-lang="en">Cheese Board</span>
+              <span data-lang="et">Juustuplaat</span>
+            </h3>
+            <p><span data-lang="en">3 cheeses, crackers, honey, fruit</span><span data-lang="et">3 juustu, kreekerid, mesi, puuviljad</span></p>
+          </div>
+          <span class="menu-item-price">14€</span>
+        </li>
+        <li class="menu-item" data-cat="food">
+          <div class="menu-item-info">
+            <h3>
+              <span data-lang="en">Fries</span>
+              <span data-lang="et">Friikartulid</span>
+            </h3>
+            <p><span data-lang="en">Seasoned, with dipping sauce</span><span data-lang="et">Maitsestatud, dipikastmega</span></p>
+          </div>
+          <span class="menu-item-price">6€</span>
+        </li>
+
+      </ul>
+    </div>
+  </article>
+
+  <!-- ============================================================
+       GALLERY PAGE
+       ============================================================ -->
+  <article id="page-gallery" class="page">
+    <div class="section">
+      <header class="section-header">
+        <p class="section-label">
+          <span data-lang="en">The Vibe</span>
+          <span data-lang="et">Atmosfäär</span>
+        </p>
+        <h2 class="section-title">
+          <span data-lang="en">Gallery</span>
+          <span data-lang="et">Galerii</span>
+        </h2>
+        <p class="section-desc">
+          <span data-lang="en">Add your own photos here — upload images to the /images/ folder and update the src attributes below.</span>
+          <span data-lang="et">Lisa siia oma fotod — lae pildid kausta /images/ ja uuenda allpool src atribuute.</span>
+        </p>
+      </header>
+
+      <!-- Gallery Grid — replace placeholders with real <img> tags -->
+      <section class="gallery-grid" aria-label="Photo gallery">
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Karaoke stage">
+            🎤
+            <span data-lang="en">Stage</span>
+            <span data-lang="et">Lava</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Bar area">
+            🍹
+            <span data-lang="en">Bar</span>
+            <span data-lang="et">Baar</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Private room">
+            🏛️
+            <span data-lang="en">Private Room</span>
+            <span data-lang="et">Privaatne ruum</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Crowd singing">
+            🎵
+            <span data-lang="en">Crowd</span>
+            <span data-lang="et">Rahvas</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Interior lights">
+            💡
+            <span data-lang="en">Lights</span>
+            <span data-lang="et">Tuled</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Private event">
+            🎉
+            <span data-lang="en">Event</span>
+            <span data-lang="et">Sündmus</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Friends at the bar">
+            👯
+            <span data-lang="en">Friends</span>
+            <span data-lang="et">Sõbrad</span>
+          </div>
+        </figure>
+
+        <figure class="gallery-item">
+          <div class="gallery-placeholder" role="img" aria-label="Song selection screen">
+            📺
+            <span data-lang="en">Song List</span>
+            <span data-lang="et">Laulunimekiri</span>
+          </div>
+        </figure>
+
+      </section>
+
+      <!-- Upload note -->
+      <aside style="margin-top:32px; padding:20px 24px; background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--radius-md);">
+        <p style="font-size:0.85rem; color:var(--color-muted);">
+          💡
+          <span data-lang="en"><strong style="color:var(--color-text);">Adding real photos:</strong> Replace each <code style="color:var(--color-accent2);">&lt;div class="gallery-placeholder"&gt;</code> with <code style="color:var(--color-accent2);">&lt;img src="images/your-photo.jpg" alt="description"&gt;</code></span>
+          <span data-lang="et"><strong style="color:var(--color-text);">Päris fotode lisamine:</strong> Asenda iga <code style="color:var(--color-accent2);">&lt;div class="gallery-placeholder"&gt;</code> elemendiga <code style="color:var(--color-accent2);">&lt;img src="images/sinu-foto.jpg" alt="kirjeldus"&gt;</code></span>
+        </p>
+      </aside>
+
+    </div>
+  </article>
+
+  <!-- ============================================================
+       CONTACT PAGE
+       ============================================================ -->
+  <article id="page-contact" class="page">
+    <div class="section">
+      <header class="section-header">
+        <p class="section-label">
+          <span data-lang="en">Get in Touch</span>
+          <span data-lang="et">Võtke ühendust</span>
+        </p>
+        <h2 class="section-title">
+          <span data-lang="en">Contact</span>
+          <span data-lang="et">Kontakt</span>
+        </h2>
+      </header>
+
+      <div class="contact-layout">
+
+        <!-- Left: Info + Hours -->
+        <div>
+          <address class="contact-info-list">
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📍</div>
+              <div>
+                <h4><span data-lang="en">Address</span><span data-lang="et">Aadress</span></h4>
+                <p>Viru 13/15tn<br>10140 Tallinn, Estonia</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">📞</div>
+              <div>
+                <h4><span data-lang="en">Phone</span><span data-lang="et">Telefon</span></h4>
+                <p><a href="tel:+3725551234" style="color:var(--color-text);">+372 555 1234</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">✉️</div>
+              <div>
+                <h4><span data-lang="en">Email</span><span data-lang="et">E-post</span></h4>
+                <p><a href="mailto:hello@karaokeBar.ee" style="color:var(--color-text);">hello@karaokeBar.ee</a></p>
+              </div>
+            </div>
+
+          </address>
+
+          <!-- Opening Hours -->
+          <div style="margin-top:40px;">
+            <h3 style="font-family:var(--font-display); font-size:1.6rem; letter-spacing:1px; color:var(--color-white); margin-bottom:16px;">
+              <span data-lang="en">Opening Hours</span>
+              <span data-lang="et">Lahtiolekuajad</span>
+            </h3>
+            <table class="hours-table" aria-label="Opening hours">
+              <tbody>
+                <tr data-day="mon">
+                  <td><span data-lang="en">Monday</span><span data-lang="et">Esmaspäev</span></td>
+                  <td>16:00 – 01:00</td>
+                </tr>
+                <tr data-day="tue">
+                  <td><span data-lang="en">Tuesday</span><span data-lang="et">Teisipäev</span></td>
+                  <td>16:00 – 01:00</td>
+                </tr>
+                <tr data-day="wed">
+                  <td><span data-lang="en">Wednesday</span><span data-lang="et">Kolmapäev</span></td>
+                  <td>16:00 – 01:00</td>
+                </tr>
+                <tr data-day="thu">
+                  <td><span data-lang="en">Thursday</span><span data-lang="et">Neljapäev</span></td>
+                  <td>16:00 – 02:00</td>
+                </tr>
+                <tr data-day="fri">
+                  <td><span data-lang="en">Friday</span><span data-lang="et">Reede</span></td>
+                  <td>16:00 – 04:00</td>
+                </tr>
+                <tr data-day="sat">
+                  <td><span data-lang="en">Saturday</span><span data-lang="et">Laupäev</span></td>
+                  <td>14:00 – 04:00</td>
+                </tr>
+                <tr data-day="sun">
+                  <td><span data-lang="en">Sunday</span><span data-lang="et">Pühapäev</span></td>
+                  <td>14:00 – 01:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right: Booking Form -->
+        <div>
+          <h3 style="font-family:var(--font-display); font-size:1.6rem; letter-spacing:1px; color:var(--color-white); margin-bottom:24px;">
+            <span data-lang="en">Make a Reservation</span>
+            <span data-lang="et">Tee broneering</span>
+          </h3>
+
+          <form class="contact-form" id="contact-form" novalidate>
+
+            <div class="form-group">
+              <label for="name">
+                <span data-lang="en">Your Name</span>
+                <span data-lang="et">Teie nimi</span>
+              </label>
+              <input type="text" id="name" name="name" required
+                placeholder="Jane Smith" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required
+                placeholder="jane@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">
+                <span data-lang="en">Phone</span>
+                <span data-lang="et">Telefon</span>
+              </label>
+              <input type="tel" id="phone" name="phone"
+                placeholder="+372 ..." />
+            </div>
+
+            <div class="form-group">
+              <label for="event-type">
+                <span data-lang="en">Event Type</span>
+                <span data-lang="et">Sündmuse tüüp</span>
+              </label>
+              <select id="event-type" name="event-type">
+                <option value="table">
+                  <span data-lang="en">Table booking</span>
+                  <span data-lang="et">Laua broneering</span>
+                </option>
+                <option value="private-room">
+                  <span data-lang="en">Private room</span>
+                  <span data-lang="et">Privaatne ruum</span>
+                </option>
+                <option value="full-venue">
+                  <span data-lang="en">Full venue hire</span>
+                  <span data-lang="et">Kogu baari rent</span>
+                </option>
+                <option value="other">
+                  <span data-lang="en">Other enquiry</span>
+                  <span data-lang="et">Muu päring</span>
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">
+                <span data-lang="en">Preferred Date</span>
+                <span data-lang="et">Soovitav kuupäev</span>
+              </label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="form-group">
+              <label for="guests">
+                <span data-lang="en">Number of Guests</span>
+                <span data-lang="et">Külaliste arv</span>
+              </label>
+              <input type="number" id="guests" name="guests" min="1" max="200"
+                placeholder="e.g. 10" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                <span data-lang="en">Message</span>
+                <span data-lang="et">Sõnum</span>
+              </label>
+              <textarea id="message" name="message"
+                placeholder="Tell us more about your event..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              <span data-lang="en">Send Message</span>
+              <span data-lang="et">Saada sõnum</span>
+            </button>
+
+          </form>
+        </div>
+
       </div>
     </div>
-  </div>
+  </article>
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="pill">Tallinn nights • Karaoke • Cocktails • Events</div>
-          <h1>Where the crowd gets louder and the night gets warmer.</h1>
-          <p class="lead">A stylish multi-page bar website built for GitHub Pages. It gives you a stronger brand feel than a one-pager and makes room for events, gallery, and bookings without getting messy.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="events.html">See what’s on</a>
-            <a class="btn btn-secondary" href="gallery.html">Open gallery</a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat"><strong>Better structure</strong><span>Separate pages for events, gallery, and booking info.</span></div>
-            <div class="stat"><strong>Static friendly</strong><span>No backend, no build, no drama for GitHub Pages.</span></div>
-            <div class="stat"><strong>Easy to edit</strong><span>Simple HTML files and one shared stylesheet.</span></div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="hero-photo">
-            <div class="hero-overlay">
-              <div><strong>Tonight at Ruddy XL</strong><span>Karaoke chaos, warm lights, signature pours, and one more round energy.</span></div>
-              <a class="btn btn-secondary" href="bookings.html">Plan a night</a>
-            </div>
-          </div>
-          <div class="mini-grid">
-            <div class="mini-panel"><h3>GitHub Pages ready</h3><p class="copy-muted">Upload these files directly to your repo and publish. Works as a static site with no framework needed.</p></div>
-            <div class="mini-panel"><h3>Replace later</h3><p class="copy-muted">Swap the demo visuals with your own venue photos once you have final assets ready.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="section-head"><div><h2>Explore the venue</h2><p>Give visitors a clean path: what the place feels like, what’s happening this week, and how to book.</p></div></div>
-        <div class="features">
-          <div class="feature-card"><div class="feature-number">01</div><h3><a href="events.html">Events page</a></h3><p>Highlight karaoke nights, guest DJs, themed parties, and private events with enough space to make each feel important.</p></div>
-          <div class="feature-card"><div class="feature-number">02</div><h3><a href="gallery.html">Gallery page</a></h3><p>A dedicated visual page feels more premium than squeezing all photos into one section.</p></div>
-          <div class="feature-card"><div class="feature-number">03</div><h3><a href="bookings.html">Bookings page</a></h3><p>Use a separate page for contact, group nights, private events, and practical venue details.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap contact-grid">
-        <div class="contact-card">
-          <div class="pill">Quick info</div>
-          <h2>Make it easy to show up.</h2>
-          <p class="lead">Fill in your real details and this becomes immediately usable for customers, event guests, and booking inquiries.</p>
-          <ul class="contact-list">
-            <li><strong>Address:</strong> Replace with your actual street and city</li>
-            <li><strong>Instagram:</strong> @yourbarname</li>
-            <li><strong>Email:</strong> bookings@yourbar.com</li>
-            <li><strong>Phone:</strong> +372 XXX XXXX</li>
-          </ul>
-          <a class="btn btn-primary" href="bookings.html">Open bookings page</a>
-          <div class="hours">
-            <div class="hours-row"><span>Wednesday</span><strong>18:00 — 01:00</strong></div>
-            <div class="hours-row"><span>Thursday</span><strong>18:00 — 02:00</strong></div>
-            <div class="hours-row"><span>Friday</span><strong>18:00 — Late</strong></div>
-            <div class="hours-row"><span>Saturday</span><strong>18:00 — Late</strong></div>
-            <div class="hours-row"><span>Sunday</span><strong>Closed / Special events</strong></div>
-          </div>
-        </div>
-        <div class="section-card map-shell">
-          <div class="map-content">
-            <div class="map-pin">⌖</div>
-            <h3>Maps, QR traffic, socials</h3>
-            <p class="lead">This page set is good as the main destination for Instagram bio links, printed QR codes, and event promotions.</p>
-            <a class="btn btn-secondary" href="https://maps.google.com" target="_blank" rel="noreferrer">Open map</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer>
-    <div class="wrap footer">
-      <p>Ruddy XL — multi-page static website concept.</p>
-      <p>Replace demo copy, links, and visuals with your final content.</p>
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-logo">KARAOKE<span>BAR</span></p>
+      <p class="footer-tagline">
+        <span data-lang="en">Viru 13/15tn, 10140 Tallinn — Open every day</span>
+        <span data-lang="et">Viru 13/15tn, 10140 Tallinn — Avatud iga päev</span>
+      </p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#home" data-page="home" onclick="showPage('home'); return false;">
+          <span data-lang="en">Home</span><span data-lang="et">Avaleht</span>
+        </a>
+        <a href="#menu" data-page="menu" onclick="showPage('menu'); return false;">
+          <span data-lang="en">Menu</span><span data-lang="et">Menüü</span>
+        </a>
+        <a href="#gallery" data-page="gallery" onclick="showPage('gallery'); return false;">
+          <span data-lang="en">Gallery</span><span data-lang="et">Galerii</span>
+        </a>
+        <a href="#contact" data-page="contact" onclick="showPage('contact'); return false;">
+          <span data-lang="en">Contact</span><span data-lang="et">Kontakt</span>
+        </a>
+      </nav>
+      <p class="footer-copy">
+        © <span id="year"></span> KaraokeBar Tallinn.
+        <span data-lang="en">All rights reserved.</span>
+        <span data-lang="et">Kõik õigused kaitstud.</span>
+      </p>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Set copyright year dynamically */
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
