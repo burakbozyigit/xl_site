@@ -67,14 +67,15 @@ ul {
 }
 
 /* --- Language toggle visibility --- */
-[data-lang] { display: none; }
-body.lang-en [data-lang="en"] { display: block; }
-body.lang-et [data-lang="et"] { display: block; }
+/* Only hide translatable content, never the language buttons themselves. */
+[data-lang]:not(.lang-btn) { display: none; }
+body.lang-en [data-lang="en"]:not(.lang-btn) { display: block; }
+body.lang-et [data-lang="et"]:not(.lang-btn) { display: block; }
 
 /* Inline elements (spans, etc.) need inline display */
-span[data-lang] { display: none; }
-body.lang-en span[data-lang="en"] { display: inline; }
-body.lang-et span[data-lang="et"] { display: inline; }
+span[data-lang]:not(.lang-btn) { display: none; }
+body.lang-en span[data-lang="en"]:not(.lang-btn) { display: inline; }
+body.lang-et span[data-lang="et"]:not(.lang-btn) { display: inline; }
 
 /* ============================================
    NAVIGATION
@@ -862,4 +863,13 @@ body.lang-et span[data-lang="et"] { display: inline; }
     text-align: center;
     padding: 32px 24px;
   }
+}
+
+/* Language switcher fix */
+.nav-links .lang-switcher { display: none; }
+#desktop-lang { display: flex; }
+
+@media (max-width: 768px) {
+  .nav-links .lang-switcher { display: flex; }
+  #desktop-lang { display: none !important; }
 }
