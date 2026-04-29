@@ -12,7 +12,7 @@ let currentPage = 'home';
    ============================================ */
 function setLanguage(lang) {
   currentLang = lang;
-  document.body.classList.remove('lang-en', 'lang-et');
+  document.body.classList.remove('lang-en', 'lang-et', 'lang-ru');
   document.body.classList.add('lang-' + lang);
 
   /* Update active button */
