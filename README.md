@@ -55,6 +55,6 @@ In `index.html`, find the Gallery section and replace placeholder divs:
 
 ## Language System
 
-Language is switched by adding `lang-en` or `lang-et` class to `<body>`.  
-Elements with `data-lang="en"` or `data-lang="et"` are shown/hidden via CSS.  
+Language is switched by adding `lang-en`, `lang-et` or `lang-ru` class to `<body>`.  
+Elements with `data-lang="en"`, `data-lang="et"` or `data-lang="ru"` are shown/hidden via CSS.  
 Preference is saved to `localStorage`.
