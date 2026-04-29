@@ -150,7 +150,11 @@ function routeFromHash() {
 document.addEventListener('DOMContentLoaded', function () {
   /* Set saved language or default to English */
   const savedLang = localStorage.getItem('kb-lang') || 'en';
-  setLanguage(savedLang);
+  if (['en', 'et', 'ru'].includes(savedLang)) {
+    setLanguage(savedLang);
+  } else {
+    setLanguage('en');
+  }
 
   /* Route based on URL hash */
   routeFromHash();

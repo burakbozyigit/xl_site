@@ -75,7 +75,8 @@ ul {
 
 /* Show selected language */
 body.lang-en [data-lang="en"]:not(.lang-btn),
-body.lang-et [data-lang="et"]:not(.lang-btn) {
+body.lang-et [data-lang="et"]:not(.lang-btn),
+body.lang-ru [data-lang="ru"]:not(.lang-btn) {
   display: revert;
 }
 
