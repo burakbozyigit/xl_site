@@ -73,11 +73,17 @@ ul {
   display: none;
 }
 
-/* Show selected language */
+/* Show selected language — block for div/p/h/li, inline for span */
 body.lang-en [data-lang="en"]:not(.lang-btn),
 body.lang-et [data-lang="et"]:not(.lang-btn),
 body.lang-ru [data-lang="ru"]:not(.lang-btn) {
-  display: revert;
+  display: block;
+}
+
+body.lang-en span[data-lang="en"]:not(.lang-btn),
+body.lang-et span[data-lang="et"]:not(.lang-btn),
+body.lang-ru span[data-lang="ru"]:not(.lang-btn) {
+  display: inline;
 }
 
 /* Keep language buttons always visible */
