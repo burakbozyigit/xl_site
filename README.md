@@ -1,11 +1,13 @@
-# KaraokeBar — Tallinn
+# ruddyXL — Tallinn
 
-A bilingual (English / Estonian) website for KaraokeBar at Viru 13/15tn, Tallinn.
+A bilingual (English / Estonian) website for ruddyXL at Viru tn. 13/15, 10140 Tallinn.
+
+🌐 **Live site:** [ruddyxl.ee](https://ruddyxl.ee)
 
 ## Project Structure
 
 ```
-karaokeBar/
+xl_site/
 ├── index.html        ← Single entry point (all 4 pages inside)
 ├── css/
 │   └── style.css     ← Dark theme, all styles
@@ -23,13 +25,13 @@ karaokeBar/
 | Gallery | Photo grid (placeholders — add real images)  |
 | Contact | Booking form + address + opening hours       |
 
-## Deploying to GitHub Pages
+## Deployment
 
-1. Create a new repository on GitHub (e.g. `karaokeBar`)
-2. Upload all files keeping the folder structure
-3. Go to **Settings → Pages**
-4. Set source to `main` branch, `/ (root)`
-5. Your site will be live at `https://yourusername.github.io/karaokeBar/`
+The site is hosted via GitHub Pages and deploys automatically.
+
+1. Make your changes locally and test in the browser
+2. Commit and push to the `master` branch
+3. GitHub Actions will run automatically — the live site updates in ~1–2 minutes
 
 ## Adding Photos to Gallery
 
@@ -40,12 +42,12 @@ In `index.html`, find the Gallery section and replace placeholder divs:
 <div class="gallery-placeholder">🎤</div>
 
 <!-- After (real image) -->
-<img src="images/your-photo.jpg" alt="Karaoke stage at KaraokeBar Tallinn" />
+<img src="images/your-photo.jpg" alt="Karaoke stage at ruddyXL Tallinn" />
 ```
 
 ## Customising
 
-- **Bar name**: Search & replace `KaraokeBar` in all files
+- **Bar name**: ruddyXL — update in index.html if needed
 - **Phone/email**: Find in `index.html` Contact section
 - **Menu prices**: Update directly in the menu items in `index.html`
 - **Opening hours**: Update the `<table class="hours-table">` in Contact section
