@@ -115,12 +115,13 @@ body.lang-et [data-lang="et"]:not(.lang-btn) {
   font-family: var(--font-logo);
   font-weight: 900;
   font-size: 1.8rem;
-  letter-spacing: 1px;
+  letter-spacing: -2px;
   color: var(--color-white);
 }
 
 .nav-logo span {
-  color: var(--color-accent);
+  color: var(--color-white);
+  /* color: var(--color-accent); */
 }
 
 .nav-links {
@@ -706,13 +707,14 @@ body.lang-et [data-lang="et"]:not(.lang-btn) {
   font-family: var(--font-logo);
   font-weight: 900;
   font-size: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: -2px;
   color: var(--color-white);
   margin-bottom: 12px;
 }
 
 .footer-logo span {
-  color: var(--color-accent);
+  color: var(--color-white);
+  /* color: var(--color-accent); */
 }
 
 .footer-tagline {
